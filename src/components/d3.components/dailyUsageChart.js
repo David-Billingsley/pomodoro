@@ -58,7 +58,7 @@ export default class D3Chart {
                     .attr('x', -HEIGHT / 2)
                     .attr('y', -50)
                     .attr('text-anchor', 'middle')
-                    .text('Count of Activities')
+                    .text('Count of Completed Activites')
                     .attr('transform', 'rotate(-90)')
 
                 rect.enter().append('rect')

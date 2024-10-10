@@ -31,7 +31,7 @@ const App = () => {
     return (
         <div className="App">
             <Header />
-            {dataFromChild === 0 ? '' : <p className='taskInfoDisplay'>{taskname}: <br/> Notes: <br/> Take the dishes from the diswasher and put them in the drying rack and refill it</p>}
+            {dataFromChild === 0 ? '' : <p className='taskInfoDisplay'> <u>{taskname} </u> <br/> Notes: <br/> Take the dishes from the diswasher and put them in the drying rack and refill it</p>}
             <Cardlist tasks={tasks} dataFromChild={setDataFromChild} taskName={setTaskName}/>
         </div>
     );

@@ -18,19 +18,21 @@ const Header = () => {
     return (
         <div>
             <div className='headerInfo'>
+                <div className='headerGrouping'>
+                    <p className='Date'> <u>Date: {dateconv(date)} </u> </p>
                 <div className='headerelements'>
-                    <ol>Date: {dateconv(date)}</ol>
-                    <ol>Number of Tasks: 4</ol>
-                </div>
-                <div className='headerelements'>
+                    <ol>Number of Tasks: 6</ol>
                     <ol>Number of Completed Tasks: 2</ol>
-                    <ol>Time Spent: 50 Minutes</ol>
                 </div>
-
-            <div className='headerelements'>
-                <DayChart className='dayChart'/>
+                <div className='headerelements'>
+                    <ol>Time Spent: 50 Minutes</ol>
+                    <ol>Time Remaining: 45 Minutes</ol>
+                </div>
+                    </div>
+                <div className='headerelements'>
+                    <DayChart className='dayChart'/>
+                </div>
             </div>
-        </div>
         </div>
     )
 }

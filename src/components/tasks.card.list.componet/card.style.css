@@ -1,10 +1,9 @@
-.sectionTitle{
-    margin-left: 10px;
-
+.sectionTitle {
+  margin-left: 10px;
+  font-size: 20px;
 }
 
 .lineBreak {
-    border-style: solid;
-    border-bottom: black;
-
+  border-style: solid;
+  border-bottom: black;
 }

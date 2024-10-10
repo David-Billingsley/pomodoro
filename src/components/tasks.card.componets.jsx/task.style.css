@@ -1,20 +1,23 @@
-.task-card{
-    border-width: 5px;
-    border-style: outset;
-    width: 140px;
-    margin-left: 10px;
-    display: inline-flex;
-    background-color: #2218a7;
-    height: 150px;
-
+.task-card {
+  border-width: 5px;
+  border-style: outset;
+  width: 140px;
+  margin-left: 10px;
+  display: inline-flex;
+  background-color: #2218a7;
+  height: 120px;
 }
 
-.task-card:hover{
-  transform: scale(1.1)
+.task-card:hover {
+  transform: scale(1.1);
 }
 
-.cardTextElements{
-    display: block;
-    color: wheat;
-    margin-left: 10px;
+.cardTextElements {
+  display: block;
+  color: wheat;
+  margin-left: 10px;
+}
+
+.taskName {
+  font-size: 20px;
 }
