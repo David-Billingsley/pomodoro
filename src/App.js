@@ -5,33 +5,47 @@ import './App.css'
 
 const App = () => {
     const [tasks, setTasks] = useState([
-        {id: 1,
-        name: 'Eat Breakfest',
-        iteration: 0},
         {
-            id:2,
+            id: 1,
+            name: 'Eat Breakfest',
+            iteration: 0,
+            notes: "Cook 3 ages and eat it"
+        },
+        {
+            id: 2,
             name: 'Move the Dishes',
-        iteration: 2
+            iteration: 2,
+            notes: "Put the dishes in the dishwasher away and refill it"
         },
         {
-            id:3,
+            id: 3,
             name: 'Write SOP',
-        iteration: 1
+            iteration: 1,
+            notes: "Instruction manual on making a bike"
         },
         {
-            id:4,
+            id: 4,
             name: 'Do Homework',
-        iteration: 5
+            iteration: 5,
+            notes: " Do chapters 1 threw 3."
         }
     ])
 
     const [dataFromChild, setDataFromChild] = useState(0)
     const [taskname, setTaskName] = useState('')
 
+    const notesList = tasks.filter((tasks) => {
+        return String(tasks.name).includes(taskname)
+    })
+
+
     return (
         <div className="App">
-            <Header />
-            {dataFromChild === 0 ? '' : <p className='taskInfoDisplay'> <u>{taskname} </u> <br/> Notes: <br/> Take the dishes from the diswasher and put them in the drying rack and refill it</p>}
+            <Header/>
+            {dataFromChild === 0 ? '' :
+                <p className='taskInfoDisplay'><u>{taskname} </u> <br/> Notes: <br/> {notesList.map((note) =>{
+                    const {notes} = note
+                    return (<p>{notes} </p>)})}</p>}
             <Cardlist tasks={tasks} dataFromChild={setDataFromChild} taskName={setTaskName}/>
         </div>
     );
